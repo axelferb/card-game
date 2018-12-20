@@ -71,7 +71,6 @@
   justify-content: center;
   align-items: center;
   font-family: 'Niconne', cursive;
-  font-size: 1em;
   -webkit-animation: flip-in-diag-1-bl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: flip-in-diag-1-bl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   transition: all 0.3s ease-in-out;
@@ -80,6 +79,7 @@
 .card-Container:hover {
   width: 400px;
   height: 550px;
+  font-size: 1.1em;
   -webkit-box-shadow: 0px 0px 80px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 80px -2px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 80px -2px rgba(0,0,0,0.75);
