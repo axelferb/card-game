@@ -1,32 +1,163 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Niconne');
+
+.active-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 270px);
+  background-image: url(./assets/images/table.jpg);
+  background-size: cover;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.arrow-card-left {
+  width: 40px;
+  height: 40px;
+  border-top: 5px solid #ff4a4a;
+  border-left: 5px solid #ff4a4a;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.arrow-card-right {
+  width: 40px;
+  height: 40px;
+  border-top: 5px solid #ff4a4a;
+  border-right: 5px solid #ff4a4a;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.arrow-card-left:hover {
+  cursor: pointer;
+  border-top: 5px solid #ff0000;
+  border-left: 5px solid #ff0000;
+}
+
+.arrow-card-right:hover {
+  cursor: pointer;
+  border-top: 5px solid #ff0000;
+  border-right: 5px solid #ff0000;
+}
+
+.arrow-circle {
+  background-color: #ffffff3d;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.card-Container {
+  background-color: #ffffff;
+  width: 350px;
+  height: 500px;
+  border: 3px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 40px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 40px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 40px -2px rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Niconne', cursive;
+  font-size: 1em;
+  -webkit-animation: flip-in-diag-1-bl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: flip-in-diag-1-bl 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-Container:hover {
+  width: 400px;
+  height: 550px;
+  -webkit-box-shadow: 0px 0px 80px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 80px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 80px -2px rgba(0,0,0,0.75);
+  transition: all 0.3s ease-in-out;
+}
+
+@-webkit-keyframes flip-in-diag-1-bl {
+  0% {
+    -webkit-transform: rotate3d(1, 1, 0, 80deg);
+            transform: rotate3d(1, 1, 0, 80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+            transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-diag-1-bl {
+  0% {
+    -webkit-transform: rotate3d(1, 1, 0, 80deg);
+            transform: rotate3d(1, 1, 0, 80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+            transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+}
+
+.factions {
+  padding: 25px ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #a52a2a;
+  border-bottom: 20px solid black;
+}
+
+.faction-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.aristocrats {
+  height: 100px;
+  width: 100px;
+  background-image: url(./assets/images-factions/002-king.svg);
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.church {
+  height: 100px;
+  width: 100px;
+  background-image: url(./assets/images-factions/003-italian-priest.svg);
+  background-size: cover;
+}
+
+.army {
+  height: 100px;
+  width: 100px;
+  background-image: url(./assets/images-factions/001-queens-guard.svg);
+  background-size: cover;
+}
+
+.peasant {
+  height: 100px;
+  width: 100px;
+  background-image: url(./assets/images-factions/004-farmer.svg);
+  background-size: cover;
+}
+
+.rebels {
+  height: 100px;
+  width: 100px;
+  background-image: url(./assets/images-factions/005-warrior.svg);
+  background-size: cover;
 }
